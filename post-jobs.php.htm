@@ -1,0 +1,443 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ask4Referral, Get Referred, Get Hired, Fast Recruitment</title>
+        
+        <!-- CSS -->
+        <link href="main.css"  rel="stylesheet"> 
+        <link href="jquery-ui.css"  rel="stylesheet"> 
+        
+        <!-- jQuery -->
+        <script src="jquery.min.js" ></script>     
+        <script src="jquery-ui.js" ></script>  
+        
+    </head>
+    <body>
+        <div class="wrap clearfix">
+            
+<header>
+                <div class="topnav-wrap">
+                    <div class="clearfix">
+                        <nav role="navigation" class="main-nav">
+                            <ul>
+                                <li><a href="index.php.htm" >Home</a></li>                                
+                                
+                                <li><a href="post-jobs.php.htm" >Post Jobs</a></li>
+                                <li><a href="find-jobs.php.htm" >Find Jobs</a></li>
+								<li><a href="about-us.php.htm" >About Us</a></li>
+                                <li><a href="contact-us.php.htm" >Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="padd-20 blackbox clearfix">
+                    <div class="logo"><a href="index.php.htm" ><img src="logo.png"  class="img-response" /></a></div>
+                </div>
+            </header>            
+            <div class="col-fullwidth">
+                <div class="whitebox padd-20 clearfix">
+                    <ol class="breadcrumb">
+                        <li><a href="index.php.htm" >Home</a></li>
+                        <li><a href="post-jobs.php.htm" >Post Jobs</a></li>
+                    </ol>
+                    <div class="col-left">
+                        <h1>Post Jobs</h1>
+                        
+                        <!-- Post Jobs Form Here-->
+                                                
+                        <form class="stdform stdform2 form" method="post" action="" onSubmit="return valid();" enctype="multipart/form-data">
+                            <input type="hidden" name="insert" value="ins">                            
+                            <div class="col-half-left">
+                                <label for="folder_id">Job Category</label>              
+                                <select name="folder_id" id="folder_id">
+                                    <option value="">-- Select Category --</option>
+                                                                        <option value="34" >Software Tester</option>
+                                                                        <option value="33" >Software Developer</option>
+                                                                    </select> 
+                                <div class="hr-spacer"></div>
+                                
+                                <label for="jtype">Job Type</label>
+                                <input type="text" name="jtype" id="jtype" class="input-xxlarge" placeholder="Ex: Full Time, Part Time">
+                                <div class="hr-spacer"></div>
+                                <label for="email">Email ID</label>
+                                <input type="email" name="email" id="email" class="input-xxlarge" value="">
+                                <div class="hr-spacer"></div>
+                                
+                                <label for="jcategory">Job Category</label>
+                                <input type="text" name="jcategory" id="jcategory" class="input-xxlarge" placeholder="Ex: Software, Hardware">
+								
+								
+                                <div class="hr-spacer"></div>
+								 <label for="designation">Designation</label>                                
+                               <input type="text" name="designation" id="designation" class="input-xxlarge" value="">
+                              
+                                 <div class="hr-spacer"></div>            
+                                <label for="renumaration">Remuneration</label>   
+                                <input type="text" name="renumaration" id="renumaration" class="input-xxlarge" value="">
+								<div class="hr-spacer"></div>
+                                <label for="address">Location</label>
+                                <input type="text" name="address" rows="" cols="" id="address" class="input-xxlarge" value="" placeholder="Eg: Hyderabad, Bangalore">
+                            </div>     
+                            
+                             <div class="col-half-right">
+                                <label for="title">Job Title</label>
+                                <input type="text" name="title" id="title" class="input-xxlarge" value="">  
+								
+                                <div class="hr-spacer"></div>                                  
+                                
+                                <label for="cname">Company Name</label> 
+								               <input type="text" name="cname" id="cname" class="input-xxlarge" value="">								
+                                <div class="hr-spacer"></div>                                  
+                                
+                                <label for="curl">Company Url</label> 
+								 <input type="text" name="curl" id="curl" class="input-xxlarge" value="" placeholder="http://">	
+                                <div class="hr-spacer"></div>
+								
+								             <label for="contact">Contact No</label>                                
+                               <input type="text" name="contact" id="contact" class="input-xxlarge" value="" placeholder="Eg: 0123456789">
+                                   <div class="hr-spacer"></div>
+								
+								               <label for="cperson">Contact Person</label>                                
+                               <input type="text" name="cperson" id="cperson" class="input-xxlarge" value="">
+                              
+                              
+                                <div class="hr-spacer"></div>
+                                
+                                <label for="expe" class="sr-only">Experience</label>
+                                <div style="display: inline-block;">
+                                    <select name="expe" id="expe">							   
+                                        <option value="">--Min Exp--</option>
+                                        <option value="0" >0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select> 
+                                </div>
+                                
+                                <div style="display: inline-block; margin-left: 25px;">
+                                    <select name="maxexpe" id="maxexpe">							   
+                                        <option value="">--Max Exp--</option>
+                                        <option value="0" >0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                                      
+                            </div>
+                            
+                            <div class="hr-spacer"></div>
+                            
+                            <div style="float: left; width: 100%;">
+                                <label for="redactor_content">Job Description</label>
+                                <textarea cols="40" rows="6" name="redactor_content" id="redactor_content" maxlength="300"></textarea>
+                                     
+                            <div class="hr-spacer"></div>    
+                                <label for="securitycode">Security Code</label> <img src="CaptchaSecurityImages.php.jpg" tppabs="http://www.mindqjobs.com/CaptchaSecurityImages.php" />
+                                 <input type="text" name="security_code" id="security_code" style="width:45%;">	
+                              
+                               
+                                <div class="hr-spacer"></div>
+                                <button type="submit" style="float:left; width: auto;">Submit </button>
+                                <button type="reset" style="float:left; width: auto; margin-left: 15px;">Reset </button>
+                              </div> 
+                            
+                        </form>
+
+                    </div>
+                    
+                      <div class="col-right">
+                        
+                            <li>Ads</li>
+                          
+                        </ul>
+                    </div>                      
+                </div>
+            </div>  
+            
+            <footer>	
+                <div class="padd-15 blackbox clearfix">
+                    <div class="foot-left">
+                        <h4>About Ask4Referral</h4>
+                        <p>Our mission is to speed up hiring process through removing the gap between the referrer and job seeker (referee), the point of contact for a Job Seeker will be the direct referrer working in the targeted company instead of the consultancy.</p>
+                        <a href="about-us.php.htm" class="readmore">read more &raquo;</a>
+                    </div>
+                    <div class="foot-center">
+                        <h4>Quick Links</h4>
+                        <ul class="foot-links">
+                            <li><a href="index.php.htm" >Home</a></li>
+                            <li><a href="about-us.php.htm" >About Us</a></li>
+                            
+                            <li><a href="post-jobs.php.htm" >Post Jobs</a></li>
+                            <li><a href="find-jobs.php.htm" >Find Jobs</a></li>
+                            <li><a href="contact-us.php.htm" >Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="foot-right">
+                        <h4>Ask4Referral Pvt Ltd </h4>
+                        <p>
+                            FF-4, Manyata Apt Near R.V. Public School<br>
+                            Mavali, Bengaluru-560032<br>
+                            Mobile: +91 9945508524</p>
+                        <p>Email: <a href="mainto:query@ask4refferalcom" class="readmore">query@ask4refferal.com</a></p>
+                    </div>
+                </div>
+            </footer>
+                   </div>
+		
+		<script src="jquery-1.7.min.js" ></script>
+<link rel="stylesheet" href="redactor.css"  />
+<script src="redactor.js" ></script>
+
+<script type="text/javascript">
+    $(document).ready(
+      function()
+      {
+        $('#redactor_content').redactor();
+      }
+    );
+	
+</script>
+
+<script>
+
+function valid()
+{
+
+var folderid=document.getElementById('folder_id').value;	
+var title=document.getElementById('title').value;
+var jtype=document.getElementById('jtype').value;
+var cname=document.getElementById('cname').value;
+var curl=document.getElementById('curl').value;
+var mail=document.getElementById('email').value;
+var contact=document.getElementById('contact').value;
+var jcategory=document.getElementById('jcategory').value;
+var cperson=document.getElementById('cperson').value;
+var designation=document.getElementById('designation').value;
+var expe=document.getElementById('expe').value;
+var maxexpe=document.getElementById('maxexpe').value;
+var renumaration=document.getElementById('renumaration').value;
+var address=document.getElementById('address').value;
+var description=document.getElementById('redactor_content').value;
+var scode=document.getElementById('security_code').value;
+var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+var regex = /^[a-zA-Z ]*$/;
+var re = /(http(s)?:\\)?([\w-]+\.)+[\w-]+[.com|.in|.org]+(\[\?%&=]*)?/;
+// var phn = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+var phn = /^\d{10}?$/;
+
+if(folderid=='' || folderid==null)
+{
+	alert("Please Choose Job Profile Folder");
+	document.getElementById('folder_id').focus();
+	return false ;
+}
+if(title=='' || title==null)
+{
+	alert("Enter Job Title");
+	document.getElementById('title').focus();
+	return false ;
+}
+if(jtype=='' || jtype==null)
+{
+	alert("Enter Job Type");
+	document.getElementById('jtype').focus();
+	return false ;
+}
+if(!regex.test(jtype))
+{
+alert("Enter characters only");
+	document.getElementById('jtype').focus();
+	return false ;
+}
+if(cname=='' || cname==null)
+{
+	alert("Enter Company Name");
+	document.getElementById('cname').focus();
+	return false ;
+}if(!regex.test(cname))
+{
+alert("Enter characters only");
+	document.getElementById('cname').focus();
+	return false ;
+}
+if(curl=='' || curl==null)
+{
+	alert("Enter Company url");
+	document.getElementById('curl').focus();
+	return false ;
+}
+if(!re.test(curl))
+{
+	alert("Enter Valid url");
+	document.getElementById('curl').focus();
+	return false ;
+}
+if(mail=='' || mail==null)
+{
+	alert("Enter Email Id");
+	document.getElementById('email').focus();
+	return false ;
+}
+if(!reg.test(mail))
+{
+alert("Enter Valid Email Id");
+	document.getElementById('email').focus();
+	return false ;
+}
+if(contact==null || contact=="")
+{
+alert("Enter Contact No");
+	document.getElementById('contact').focus();
+	return false ;
+}
+if(!phn.test(contact))
+{
+alert("Please Enter Your 10 digit Mobile/Phone No");
+	document.getElementById('contact').focus();
+	return false ;
+}
+
+if(cperson==null || cperson=="")
+{
+alert("Enter Contact person");
+	document.getElementById('cperson').focus();
+	return false ;
+}
+if(!regex.test(cperson))
+{
+alert("Enter characters only");
+	document.getElementById('cperson').focus();
+	return false ;
+}
+if(designation==null || designation=="")
+{
+alert("Enter Designation");
+	document.getElementById('designation').focus();
+	return false ;
+}
+if(!regex.test(designation))
+{
+alert("Enter characters only");
+	document.getElementById('designation').focus();
+	return false ;
+}
+if(jcategory=='' || jcategory==null)
+{
+	alert("Enter Job Category");
+	document.getElementById('jcategory').focus();
+	return false ;
+}
+if(!regex.test(jcategory))
+{
+alert("Enter characters only");
+	document.getElementById('jcategory').focus();
+	return false ;
+}
+if(expe=='' || expe==null)
+{
+	alert("Enter Min Experience");
+	document.getElementById('expe').focus();
+	return false ;
+}
+if(maxexpe=='' || maxexpe==null)
+{
+	alert("Enter Max Experience");
+	document.getElementById('maxexpe').focus();
+	return false ;
+}
+if(expe>maxexpe){
+alert("MIn Experience Should be lessthan Max Experience");
+	document.getElementById('expe').focus();
+	return false ;
+}
+if(renumaration=='' || renumaration==null)
+{
+	alert("Enter The Renumaration");
+	document.getElementById('renumaration').focus();
+	return false ;
+}
+if(address=='' || address==null)
+{
+	alert("Enter Job Location");
+	document.getElementById('address').focus();
+	return false ;
+}
+if(!regex.test(address))
+{
+alert("Enter Valid Location");
+	document.getElementById('address').focus();
+	return false ;
+}
+if(description=='' || description==null)
+{
+	alert("Enter Job Description");
+	document.getElementById('redactor_content').focus();
+	return false ;
+}
+if(scode=='' || scode==null)
+{
+	alert("Enter Security Code");
+	document.getElementById('security_code').focus();
+	return false ;
+}
+return true;
+}
+</script>
+    </body>
+</html>

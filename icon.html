@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ShareThis</title>
+<script src="http://w.sharethis.com/dynamic/stlib/header.js" type="text/javascript"></script>
+<script src="http://w.sharethis.com/dynamic/stlib/cookie.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+	margin: 0;
+}
+#icon {
+	background-color: #009BB0;
+	border: 1px solid #149BAF;
+}
+#icon:hover {
+	background: #95ecfb; /* Old browsers */
+	background: -moz-linear-gradient(top,  #95ecfb 0%, #95ecfb 5%, #3fdcf5 6%, #1a9aad 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95ecfb), color-stop(5%,#95ecfb), color-stop(6%,#3fdcf5), color-stop(100%,#1a9aad)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #95ecfb 0%,#95ecfb 5%,#3fdcf5 6%,#1a9aad 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #95ecfb 0%,#95ecfb 5%,#3fdcf5 6%,#1a9aad 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #95ecfb 0%,#95ecfb 5%,#3fdcf5 6%,#1a9aad 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #95ecfb 0%,#95ecfb 5%,#3fdcf5 6%,#1a9aad 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95ecfb', endColorstr='#1a9aad',GradientType=0 ); /* IE6-9 */
+}
+#help {
+	background: rgba(0,0,0,0.55);
+	border: 1px solid transparent;
+}
+#help:hover {
+	background: rgba(0,0,0,1);
+}
+.icon {
+	background: url("http://w.sharethis.com/images/clip/CLIP_SPRITE.png") no-repeat scroll 0px 0px transparent;
+}
+.iconBlock {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: -2px;
+}
+</style>
+</head>
+<body>
+<div style="width: 70px; ">
+	<div id="icon" class="iconBlock">
+		<div id="scissor" class="icon" style="height: 18px;width: 25px;margin-top: 4px;margin-left: 1px;"></div>
+	</div>
+	<div id="help" class="iconBlock">
+		<div id="mark" class="icon" style="background-position: 0px -361px;height: 14px;width: 15px;margin-top: 8px;margin-left: 8px;"></div>
+	</div>
+	<!-- <input id="off" type="checkbox" onchange='cbClick(this);' style=" position: relative; bottom: 10px;display: none;"><span style="position: relative;bottom: 9px;display: none;">Turn off</span> -->
+</div>
+<script type="text/javascript">
+	function sendMessage(msg, data) {
+		if(typeof(window.postMessage)!=="undefined" && document.referrer!==""){
+			parent.postMessage("ShareThis6"+(msg?"|"+msg:"")+(data?"|"+data:""), document.referrer);
+		}
+	}
+	
+	document.getElementById('icon').onclick=function(){
+		sendMessage("click");
+	};
+	document.getElementById('scissor').onmouseover=function(){
+		sendMessage("clickHover");
+	};
+	document.getElementById('help').onclick=function(){
+		sendMessage("intro");
+	};
+	document.getElementById('mark').onmouseover=function(e){
+		sendMessage("introHover");
+	};
+	
+	if (stlib.cookie.getCookie('sOff')===false){
+		sendMessage("enable");
+	}
+</script>
+</body>
+</html>
